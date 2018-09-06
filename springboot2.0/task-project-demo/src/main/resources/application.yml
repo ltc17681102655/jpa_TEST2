@@ -1,0 +1,12 @@
+spring:
+  datasource:
+     url: jdbc:mysql://39.106.208.40_3306/aliyun_project1?useUnicode=true&characterEncoding=utf8
+     username: root
+     password: 1234
+     driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 8083
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml

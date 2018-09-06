@@ -1,0 +1,15 @@
+#配置数据源
+spring:
+  datasource:
+     url: jdbc:mysql://127.0.0.1:3306/myproject?useUnicode=true&characterEncoding=utf8
+     username: root
+     password: 1234
+     driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 8082
+
+#注解xml合并版
+#指定mybatis映射文件的地址
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
