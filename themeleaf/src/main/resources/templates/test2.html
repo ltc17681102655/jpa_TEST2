@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<p class="sep">迭代初步</p>
+<div>
+    <ul>
+        <li>
+            <span class="list">姓名</span>
+            <span class="list">年龄</span>
+        </li>
+        <li th:each="user : ${users}">
+
+            <span class="list" th:text="${user.name}"></span>
+            <span class="list" th:text="${user.age}"></span>
+
+        </li>
+
+    </ul>
+
+
+    <p class="sep">th:if</p>
+    <div>
+        <div th:if="${users}">
+            todo 显示 employees 列表
+        </div>
+        <div th:if="not ${users}">
+            这里不会显示
+        </div>
+    </div>
+    <p class="sep">switch 语句</p>
+    <div th:switch="${users.size()}">
+        <p th:case="1">1 个</p>
+        <p th:case="2">2 个</p>
+        <p th:case="3">3 个</p>
+        <p th:case="*">很多个</p>
+    </div>
+</body>
+</html>

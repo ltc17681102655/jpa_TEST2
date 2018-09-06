@@ -1,0 +1,39 @@
+server:
+  port: 8101
+
+spring:
+  ##\u914D\u7F6E\u6570\u636E\u6E90
+  datasource:
+     driver-class-name: com.mysql.jdbc.Driver
+     url: jdbc:mysql://39.106.208.40:3306/spingboot-jpa
+     username: root
+     password: 1234
+  ##\u5F00\u542FJPA
+  jpa:
+    hibernate:
+      ##\u81EA\u52A8\u5EFA\u8868
+      ddl-auto: update
+    ##\u6253\u5370sql\u8BED\u53E5
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  ##\u914D\u7F6Eredis
+  redis:
+    ##\u9ED8\u8BA4redis\u5BA2\u6237\u7AEF\u8FDE\u63A5\u4E3A0 \u53EF\u4FEE\u6539
+    database: 0
+    ##\u8FDE\u63A5\u5730\u5740 \u5982\uFF1A00.000.000.000
+    host: 39.106.208.40
+    ##\u8FDE\u63A5\u7AEF\u53E3\u53F7 \u9ED8\u8BA4\u662F6379 \u53EF\u4FEE\u6539
+    port: 6379
+    ##redis\u5BA2\u6237\u7AEF\u5BC6\u7801
+    password: 578519083
+    pool:
+      ##\u8FDE\u63A5\u6C60\u6700\u5927\u7A7A\u95F2\u8FDE\u63A5
+      max-idle: 8
+      ##\u8FDE\u63A5\u6C60\u6700\u5C0F\u7A7A\u95F2\u8FDE\u63A5
+      min-idle: 0
+      ##\u8FDE\u63A5\u6C60\u6700\u5927\u8FDE\u63A5\u6570
+      max-active: 8
+      ##\u8FDE\u63A5\u6C60\u6700\u5927\u7B49\u5F85\u65F6\u95F4
+      max-wait: 1
+    ##\u8FDE\u63A5\u8D85\u65F6\u65F6\u95F4
+    timeout: 5000
