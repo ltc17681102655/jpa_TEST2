@@ -1,0 +1,17 @@
+server:
+  port: 8083
+
+
+spring:
+  application:
+    name: eureka-ribbon
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+
+#feign需要ribbon不需要配置
+#feign.hystrix.enabled: true
+
+
