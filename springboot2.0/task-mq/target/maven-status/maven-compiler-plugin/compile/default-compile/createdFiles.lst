@@ -1,6 +1,0 @@
-consume\Receiver.class
-provider\Sender.class
-config\RabbitConfig.class
-Application_mq.class
-domain\Event.class
-controller\FirstController2.class

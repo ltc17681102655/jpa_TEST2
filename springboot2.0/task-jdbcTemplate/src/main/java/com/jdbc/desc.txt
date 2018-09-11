@@ -1,9 +1,0 @@
-1.Spring之jdbcTemplate：查询的三种方式（单个值、单个对象、对象集合）
-
-2、query查询方法中带有回调接口有三个：ResultSetExtractor、RowCallbackHandler、RowMapper
-使用ResultSetExtractor时，一般是直接new ResultSetExtractor()，然后在extractData(ResultSet rs)方法中实现自己的内容，最后返回Object结果。
-使用RowCallbackHandler时，也是new RowCallbackHandler()，然后在processRow(ResultSet rs)方法中实现自己代码，并且将内容保存在上下文变量中，因为此方法没有返回类型（void）
-使用RowMapper时，new RowMapper(), 然后在mapRow(ResultSet rs, int rowNum)实现自己代码，并返回Object结果。
-
-3、ResultSetExtractor一次处理多个结果，而RowCallbackHandler、RowMapper只处理单行结果
-
