@@ -1,7 +1,7 @@
-#ÅäÖÃÊı¾İÔ´
+#ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´
 spring:
   datasource:
-     url: jdbc:mysql://127.0.0.1:3306/myproject?useUnicode=true&characterEncoding=utf8
+     url: jdbc:mysql://39.106.208.40:3306/springboot-mybatis?useUnicode=true&characterEncoding=utf8
      username: root
      password: 1234
      driver-class-name: com.mysql.jdbc.Driver
@@ -9,7 +9,11 @@ spring:
 server:
   port: 8082
 
-#×¢½âxmlºÏ²¢°æ
-#Ö¸¶¨mybatisÓ³ÉäÎÄ¼şµÄµØÖ·
+#×¢ï¿½ï¿½xmlï¿½Ï²ï¿½ï¿½ï¿½
+#Ö¸ï¿½ï¿½mybatisÓ³ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Äµï¿½Ö·
 mybatis:
   mapper-locations: classpath:mapper/*.xml
+  configuration:
+#æ‰“å°sql
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
